@@ -182,7 +182,7 @@ class CalendarStripState extends State<CalendarStrip>
   }
 
   DateTime getDateOnly(DateTime dateTimeObj) {
-    return DateTime(dateTimeObj.year, dateTimeObj.month, dateTimeObj.day);
+    return dateTimeObj == null ? DateTime.now() : DateTime(dateTimeObj.year, dateTimeObj.month, dateTimeObj.day);
   }
 
   bool isDateMarked(date) {
